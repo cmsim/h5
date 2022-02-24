@@ -8,10 +8,22 @@ module.exports = {
   },
   extends: [
     // add more generic rulesets here, such as:
-    // 'eslint:recommended',
-    'plugin:vue/vue3-strongly-recommended',
+    'eslint:recommended',
+    'plugin:vue/vue3-essential',
+    '@vue/typescript/recommended',
     'prettier'
-    // 'plugin:vue/recommended' // Use this if you are using Vue.js 2.x.
   ],
-  rules: {}
+  rules: {
+    'prettier/prettier': [
+      'error',
+      {
+        singleQuote: true,
+        bracketSpacing: true,
+        semi: false,
+        arrowParens: 'avoid',
+        printWidth: 140,
+        trailingComma: 'none'
+      }
+    ]
+  }
 }

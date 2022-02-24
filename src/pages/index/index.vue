@@ -10,8 +10,13 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, watchEffect } from 'vue'
+import { subject } from '@/utils/api'
 const title = ref('Hello')
+watchEffect(async () => {
+  const response = await subject()
+  console.log('xxxx', response)
+})
 </script>
 
 <style>
