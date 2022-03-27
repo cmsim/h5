@@ -47,10 +47,10 @@
     "@dcloudio/uni-mp-weixin": "^3.0.0-alpha-3040220220310005",
     "@dcloudio/uni-quickapp-webview": "^3.0.0-alpha-3040220220310005",
     "@dcloudio/uni-ui": "^1.4.12",
-    "@heroicons/vue": "^1.0.6",
     "pinia": "^2.0.12",
     "uni-ajax": "^2.4.3",
-    "vue": "^3.2.31"
+    "vue": "^3.2.31",
+    "vue-tabler-icons": "^2.4.3"
   },
   "devDependencies": {
     "@dcloudio/types": "^2.5.18",

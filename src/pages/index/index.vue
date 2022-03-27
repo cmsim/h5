@@ -6,16 +6,16 @@
       </swiper-item>
     </swiper>
     <uni-grid :column="4">
-      <uni-grid-item> <ChartBarIcon class="h-5 w-5 text-blue-500" /> 排行榜 </uni-grid-item>
-      <uni-grid-item> <CalendarIcon class="h-5 w-5 text-blue-500" /> 每日放送 </uni-grid-item>
-      <uni-grid-item> <BookmarkIcon class="h-5 w-5 text-blue-500" /> 目录 </uni-grid-item>
-      <uni-grid-item> <TagIcon class="h-5 w-5 text-blue-500" /> 标签 </uni-grid-item>
+      <uni-grid-item> <Icon type="ChartBar" /> 排行榜 </uni-grid-item>
+      <uni-grid-item> <Icon type="Calendar" /> 每日放送 </uni-grid-item>
+      <uni-grid-item> <Icon type="Bookmark" /> 目录 </uni-grid-item>
+      <uni-grid-item> <Icon type="Tag" /> 标签 </uni-grid-item>
     </uni-grid>
     <uni-grid :column="4">
-      <uni-grid-item> <ChartBarIcon class="h-5 w-5 text-blue-500" /> 排行榜 </uni-grid-item>
-      <uni-grid-item> <CalendarIcon class="h-5 w-5 text-blue-500" /> 每日放送 </uni-grid-item>
-      <uni-grid-item> <MenuIcon class="h-5 w-5 text-blue-500" /> 索引 </uni-grid-item>
-      <uni-grid-item> <DotsHorizontalIcon class="h-5 w-5 text-blue-500" /> 自定义 </uni-grid-item>
+      <uni-grid-item> <Icon type="ChartBar" /> 排行榜 </uni-grid-item>
+      <uni-grid-item> <Icon type="Calendar" /> 每日放送 </uni-grid-item>
+      <uni-grid-item> <Icon type="Menu" /> 索引 </uni-grid-item>
+      <uni-grid-item> <Icon type="DotsHorizontal" /> 自定义 </uni-grid-item>
     </uni-grid>
     <view class="flex mt-4">
       <view class="flex-grow">online 666</view>
@@ -34,7 +34,7 @@
 import { ref, onMounted, watchEffect } from 'vue'
 import { storeToRefs } from 'pinia'
 import { useSubjectStore } from '~/store/subject'
-import { ChartBarIcon, CalendarIcon, TagIcon, BookmarkIcon, DotsHorizontalIcon, MenuIcon } from '@heroicons/vue/Outline'
+import Icon from '~/components/Icon/index.vue'
 const subjectStore = useSubjectStore()
 const data = ref([
   { url: 'https://puui.qpic.cn/tv/0/1242149629_1080607/0?max_age=7776000' },
