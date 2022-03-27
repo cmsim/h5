@@ -9,7 +9,7 @@ export default defineConfig(({ command }) => {
     plugins: [uni(), Unocss()],
     resolve: {
       alias: {
-        '@': path.resolve(__dirname, 'src')
+        '~': path.resolve(__dirname, 'src')
       }
     },
     build: {

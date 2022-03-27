@@ -33,7 +33,7 @@
 <script setup lang="ts">
 import { ref, onMounted, watchEffect } from 'vue'
 import { storeToRefs } from 'pinia'
-import { useSubjectStore } from '@/store/subject'
+import { useSubjectStore } from '~/store/subject'
 import { ChartBarIcon, CalendarIcon, TagIcon, BookmarkIcon, DotsHorizontalIcon, MenuIcon } from '@heroicons/vue/Outline'
 const subjectStore = useSubjectStore()
 const data = ref([
