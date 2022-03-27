@@ -1,4 +1,4 @@
-import { subject } from '@/utils/api'
+import { subject } from '~/utils/api'
 import { defineStore } from 'pinia'
 
 // main is the name of the store. It is unique across your application
