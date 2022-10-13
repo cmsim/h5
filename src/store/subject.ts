@@ -1,12 +1,12 @@
-import { subject } from '~/utils/api'
 import { defineStore } from 'pinia'
+import { subject } from '~/utils/api'
 
 // main is the name of the store. It is unique across your application
 // and will appear in devtools
 export const useSubjectStore = defineStore('subject', {
   // a function that returns a fresh state
   state: (): { list: { name: string; id: number; pic: string }[] } => ({
-    list: []
+    list: [],
   }),
   // optional getters
   getters: {},
@@ -16,6 +16,6 @@ export const useSubjectStore = defineStore('subject', {
       const res = await subject()
       console.log(res, 'store')
       this.list = res.data.list
-    }
-  }
+    },
+  },
 })

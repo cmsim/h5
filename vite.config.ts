@@ -1,5 +1,5 @@
-import { defineConfig } from 'vite'
 import path from 'path'
+import { defineConfig } from 'vite'
 import uni from '@dcloudio/vite-plugin-uni'
 import Unocss from 'unocss/vite'
 
@@ -9,8 +9,8 @@ export default defineConfig(({ command }) => {
     plugins: [uni(), Unocss()],
     resolve: {
       alias: {
-        '~': path.resolve(__dirname, 'src')
-      }
+        '~': path.resolve(__dirname, 'src'),
+      },
     },
     build: {
       terserOptions: {
@@ -20,9 +20,9 @@ export default defineConfig(({ command }) => {
         compress: {
           drop_console: command !== 'serve',
           // 默认是true
-          drop_debugger: command !== 'serve'
-        }
-      }
-    }
+          drop_debugger: command !== 'serve',
+        },
+      },
+    },
   }
 })

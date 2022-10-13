@@ -1,3 +1,10 @@
+<script setup lang="ts">
+import { computed } from 'vue'
+
+const props = defineProps<{ class?: string; type: string }>()
+const className = computed(() => (props.class ? props.class : 'h-5 w-5 text-blue-500'))
+</script>
+
 <template>
   <template v-if="type === 'ChartBar'">
     <svg xmlns="http://www.w3.org/2000/svg" :class="className" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -46,9 +53,3 @@
     </svg>
   </template>
 </template>
-<script setup lang="ts">
-import { computed } from 'vue'
-
-const props = defineProps<{ class?: string; type: string }>()
-const className = computed(() => (props.class ? props.class : 'h-5 w-5 text-blue-500'))
-</script>
