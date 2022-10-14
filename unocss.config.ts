@@ -1,3 +1,5 @@
+import presetWeapp from 'unocss-preset-weapp'
+import { transformerAttributify, transformerClass } from 'unocss-preset-weapp/transformer'
 import { defineConfig, presetAttributify, presetIcons, presetUno, presetWebFonts } from 'unocss'
 
 export default defineConfig({
@@ -19,5 +21,13 @@ export default defineConfig({
       scale: 1.2,
       warn: true,
     }),
+    // https://github.com/MellowCo/unocss-preset-weapp
+    presetWeapp(),
+  ],
+  transformers: [
+    // options https://github.com/MellowCo/unocss-preset-weapp/tree/main/src/transformer/transformerAttributify
+    transformerAttributify(),
+    // options https://github.com/MellowCo/unocss-preset-weapp/tree/main/src/transformer/transformerClass
+    transformerClass(),
   ],
 })
